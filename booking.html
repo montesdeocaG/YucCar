@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Booking Form HTML Template</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Reserva tu viaje</h1>
+						</div>
+						<form>
+							<div class="form-group">
+								<div class="form-checkbox">
+									<label for="Redondo">
+										<input type="radio" id="Redondo" name="flight-type">
+										<span></span>Redondo
+									</label>
+									<label for="De ida">
+										<input type="radio" id="De ida" name="flight-type">
+										<span></span>De ida
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+									<div class="form-group">
+										<select class="form-control">
+											<option>Merida Centro</option>
+											<option>Valladolid</option>
+											<option>Progreso</option>
+											<option>Izamal</option>
+											<option>Celestun</option>
+											<option>Cancun</option>
+										</select>
+										<span class="select-arrow"></span>
+										<span class="form-label">Origen</span>
+									</div>
+							</div>
+							<div class="col-md-4">
+									<div class="form-group">
+										<select class="form-control">
+											<option>Merida Centro</option>
+											<option>Valladolid</option>
+											<option>Progreso</option>
+											<option>Izamal</option>
+											<option>Celestun</option>
+											<option>Cancun</option>
+										</select>
+										<span class="select-arrow"></span>
+										<span class="form-label">Destino</span>
+									</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date">
+										<span class="form-label">Fecha</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<select class="form-control">
+											<option>Economia</option>
+											<option>Negocios</option>
+											<option>Primera clase</option>
+										</select>
+										<span class="select-arrow"></span>
+										<span class="form-label">Clase de viaje</span>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6 o mas</option>
+										</select>
+										<span class="select-arrow"></span>
+										<span class="form-label">Viajeros</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Revisar disponibilidad</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script>
+
+</body>
+
+</html>
