@@ -1,2 +1,3 @@
 # YucCar
-example ticket reservation
+example ticket reservation for class.
+
